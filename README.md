@@ -28,7 +28,7 @@ Run the three subprojects in order. The handoff between them is a plain copy of 
 2. [`inference/`](inference/README.md) runs the VLM sweep over a copy of that dataset.
 3. [`eval/`](eval/README.md) scores the responses and produces metrics and plots.
 
-A full sweep is about 360k VLM calls (5 models, 2000 scenes, 10 questions, up to 4 modality combos), which takes around 16 hours on an NVIDIA RTX PRO 6000. To smoke-test the pipeline, set `count` to something small in `data-gen/config.yaml` and run end to end.
+A full sweep is about 360k VLM calls (5 models, 2000 scenes, 10 questions, up to 4 modality combos), which takes around 16 hours on an NVIDIA RTX PRO 6000. To test the pipeline, set `count` to something small in `data-gen/config.yaml` and run end to end.
 
 The generated dataset and the model responses used in the paper are mirrored here: [Google Drive](https://drive.google.com/drive/u/1/folders/1tjFe_uDZUsKY0G8HfGDlxHODX9VWc51P). Drop them into `data-gen/dataset/` and `inference/responses.jsonl` to skip ahead to eval.
 
@@ -42,7 +42,7 @@ The generated dataset and the model responses used in the paper are mirrored her
 | `gemma3_4b`         | gemma      | `google/gemma-3-4b-it`             |
 | `cosmos_reason2_2b` | qwen       | `nvidia/Cosmos-Reason2-2B`         |
 
-Three of the five are gated on Hugging Face. Accept the license on each model page while logged in before running inference:
+Three of the five models are gated on Hugging Face. Accept the license on each model page while logged in before running inference:
 
 - [`google/gemma-3-4b-it`](https://huggingface.co/google/gemma-3-4b-it) (Google Gemma license)
 - [`google/paligemma2-3b-mix-224`](https://huggingface.co/google/paligemma2-3b-mix-224) (Google Gemma license)
