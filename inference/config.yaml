@@ -1,0 +1,45 @@
+data_root: dataset
+output_path: responses.jsonl
+
+scene_selection:
+  scene_ids: null
+  start: 0
+  limit: null
+
+inference:
+  device_map: auto
+  dtype: auto
+  max_new_tokens: 64
+  temperature: 0.0
+  do_sample: false
+  resume: true
+
+prompt: Answer with one word, a number, or a short phrase.
+
+modalities:
+  require_rgb: true
+  optional:
+    - depth
+    - description
+
+models:
+  - key: qwen3_vl_4b
+    family: qwen
+    model_id: Qwen/Qwen3-VL-4B-Instruct
+    enabled: true
+  - key: qwen25_vl_3b
+    family: qwen
+    model_id: Qwen/Qwen2.5-VL-3B-Instruct
+    enabled: true
+  - key: paligemma2_3b
+    family: paligemma
+    model_id: google/paligemma2-3b-mix-224
+    enabled: true
+  - key: gemma3_4b
+    family: gemma
+    model_id: google/gemma-3-4b-it
+    enabled: true
+  - key: cosmos_reason2_2b
+    family: qwen
+    model_id: nvidia/Cosmos-Reason2-2B
+    enabled: true

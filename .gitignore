@@ -1,0 +1,54 @@
+# OS
+.DS_Store
+
+# Editor / tooling
+.vscode/
+.claude/
+
+# Python
+__pycache__/
+*.py[oc]
+*.egg-info/
+build/
+dist/
+wheels/
+
+# Virtual environments
+.venv/
+
+# Environment files
+.env
+*.env
+.env.*
+!.env.example
+
+# Generated datasets and intermediate handoffs
+data-gen/dataset/*
+!data-gen/dataset/.gitkeep
+inference/dataset/
+inference/responses.jsonl
+eval/dataset/
+eval/responses.jsonl
+
+# Eval results (keep dir via .gitkeep)
+eval/output/*
+!eval/output/.gitkeep
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+missfont.log
+
+# Inference logs
+inference.log
+render.log
+
+# Report (kept locally, excluded from repo)
+report/

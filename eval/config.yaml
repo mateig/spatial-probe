@@ -1,0 +1,15 @@
+data_root: dataset
+responses_path: responses.jsonl
+
+output_dir: output
+scored_path: output/scored.jsonl
+metrics_dir: output/metrics
+plots_dir: output/plots
+
+# Plot options
+plot:
+  dpi: 130
+  palette: viridis
+
+# Limit to a subset of scenes (None = all)
+scene_limit: null
